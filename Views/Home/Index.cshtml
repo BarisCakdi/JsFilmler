@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "FilmDünyası";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Film Öneri</h1>
+</div>
+<form id="filmForm" class="mb-5">
+    <div class="row">
+        <div class="col-6 mb-3">
+            <label for="isimInput" class="form-label">Film Adı</label>
+            <input required type="text" name="isim" class="form-control" id="isimInput" placeholder="Film" />
+        </div>
+        <div class="col-6 mb-3">
+            <label for="kategoriInput" class="form-label">Kategori</label>
+            <select required name="kategori" class="form-select" id="kategoriInput">
+                <option disabled selected value="">Seçiniz</option>
+                <option>Aksiyon</option>
+                <option>Komedi</option>
+                <option>Fantastik</option>
+                <option>Korku</option>
+                <option>Dram</option>
+                <option>Biyografi</option>
+            </select>
+        </div>
+        <div class="col-12 mb-3">
+            <label for="konuInput" class="form-label">Konu</label>
+            <textarea required name="konu" class="form-control" id="konuInput" placeholder="Film içeriği"></textarea>
+        </div>
+        <div class="col-4 mb-3">
+            <label for="puanInput" class="form-label">Puan</label>
+            <input required name="puan" type="number" min="1" max="10" class="form-control" id="puanInput" placeholder="Puan" />
+        </div>
+        <div class="col-8 mb-3">
+            <label for="resimInput" class="form-label">Resim</label>
+            <input required type="file" multiple accept="İmage/*" name="resim" class="form-control" id="resimInput"  />
+        </div>
+        <div class="text-end">
+            <button class="btn btn-primary">Ekle</button>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>FİLM</th>
+            <th>KATEGORİ</th>
+            <th>KONU</th>
+            <th>PUAN</th>
+            <th>GÖRSEL</th>
+        </tr>
+    </thead>
+    <tbody id="filmTablosu">
+        <tr>
+            
+        </tr>
+
+    </tbody>
+
+</table>
+
